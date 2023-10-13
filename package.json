@@ -1,0 +1,19 @@
+{
+  "name": "cypress-lemax",
+  "version": "1.0.0",
+  "description": "Task for position of QA for Lemax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "task",
+    "lemax",
+    "qa"
+  ],
+  "author": "Vilim Hlusicka",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.1"
+  }
+}
