@@ -23,14 +23,12 @@ context('BKNG01-01-03', () => {
         cy.get('[data-testid="destination-container"]')
             .type('Rovinj')
 
-        // Find the unique Rovinj match and select it (Regex used)
+        // Find the unique "Rovinj" match and select it (Regex used)
         cy.get('[data-testid="autocomplete-result"]').contains(/^Rovinj$/).click()
 
         // Verify that Rovinj is selected
         cy.get('[placeholder="Where are you going?"]')
             .should('have.attr', 'value', 'Rovinj, Croatia')
     })
-
-
-  })
+})
   
