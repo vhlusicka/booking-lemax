@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: 'https://www.booking.com/'
   },
-  "defaultCommandTimeout": 12000
+  defaultCommandTimeout: 12000
 });

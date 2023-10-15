@@ -3,7 +3,7 @@
 context('BKNG01-01-03', () => {
     beforeEach(() => {
         // Visit web
-        cy.visit('https://www.booking.com/')
+        cy.visit('/')
         // Decline the cookies
         cy.get('#onetrust-banner-sdk').contains('Decline').click()
         // Set language and currency

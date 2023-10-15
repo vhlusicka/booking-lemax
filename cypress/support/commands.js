@@ -33,6 +33,15 @@ Cypress.Commands.add('setPreconditions', () => {
     // Change language to "English (US)"
     cy.get('[aria-label="Menu"]').click()
     cy.get('[data-testid="header-mobile-menu-language-picker-menu-item"]').click()
+    // This waits for "Sign in, save money" popup which may or may not appear (and then closes it if it appears)
+    cy.wait(2000).
+        then (() => {
+            cy.get('body').then($body => {
+                if ($body.find('[aria-label="Dismiss sign-in info."]').length > 0) {
+                    cy.get('[aria-label="Dismiss sign-in info."]').click();
+                }
+            })
+        })
     cy.get('[data-testid="All languages"]').contains('English (US)').click()
 
     // Verify that currency and language are successfully set
